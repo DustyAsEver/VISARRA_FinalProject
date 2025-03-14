@@ -1,0 +1,38 @@
+.modal-content {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+.brand-logo {
+    height: 80px;
+    width: 120px;
+    vertical-align: middle;
+}
+
+/* For smaller screens */
+@media (max-width: 576px) {
+    .brand-logo {
+        height: 30px;
+    }
+}
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: var(--heading-font-weight);
+    color: var(--dark-color);
+}
+
+.modal-body a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.brand-logo {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* For smaller screens */
+@media (max-width: 576px) {
+    .brand-logo {
+        height: 30px;
+    }
+}

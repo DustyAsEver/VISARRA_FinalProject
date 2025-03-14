@@ -1,0 +1,366 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Variables */
+:root {
+    --primary-color: #3a5dff;
+    --secondary-color: #ff3366;
+    --accent-color: #00d3a9;
+    --dark-color: #1a1a2e;
+    --light-color: #f8f9fa;
+    --gray-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --facebook-color: #3b5998;
+    --google-color: #4285F4;
+    
+    --body-font: 'Poppins', sans-serif;
+    --heading-font-weight: 700;
+    --transition-speed: 0.3s;
+    --border-radius: 8px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--dark-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--heading-font-weight);
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+}
+
+a:hover {
+    color: #2a4cbf;
+}
+
+.btn {
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2a4cbf;
+    border-color: #2a4cbf;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Left Side - Image */
+.login-image {
+    flex: 1;
+    position: relative;
+    background-color:rgb(83, 57, 131);
+    display: fixed;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.logo-container {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+}
+
+/* Right Side - Form */
+.login-form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    position: relative;
+    background-color: white;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.back-button a {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.back-button a:hover {
+    color: var(--dark-color);
+}
+
+.form-wrapper {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.input-group-text {
+    background-color: white;
+    border-right: none;
+    color: var(--gray-color);
+}
+
+.form-control {
+    border-left: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.toggle-password {
+    border-left: none;
+    background-color: white;
+}
+
+.toggle-password:hover {
+    background-color: white;
+    border-color: #ced4da;
+}
+
+.forgot-password {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.forgot-password:hover {
+    color: #2a4cbf;
+}
+
+.register-link, .login-link {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.register-link:hover, .login-link:hover {
+    color: #2a4cbf;
+}
+
+/* Separator */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.separator span {
+    padding: 0 10px;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+/* Social Login Buttons */
+.btn-facebook {
+    background-color: var(--facebook-color);
+    color: white;
+}
+
+.btn-facebook:hover {
+    background-color: #2d4373;
+    color: white;
+}
+
+.btn-google {
+    background-color: white;
+    color: #444;
+    border: 1px solid #ddd;
+}
+
+.btn-google:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .login-container {
+        flex-direction: column;
+    }
+    
+    .login-image {
+        height: 200px;
+    }
+    
+    .login-form-container {
+        padding: 2rem 1rem;
+    }
+    
+    .form-wrapper {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1050;
+    transform: translateX(150%);
+    transition: transform 0.3s ease;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+}
+
+.notification i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.notification.success i {
+    color: var(--success-color);
+}
+
+.notification.error i {
+    color: var(--secondary-color);
+}
+
+/* Sale Banner Pop-up */
+.sale-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1100;
+    max-width: 500px;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.sale-popup-content {
+    position: relative;
+}
+
+.sale-popup-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sale-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.sale-popup-close:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.sale-popup-footer {
+    padding: 15px;
+    text-align: center;
+}
+
+.sale-popup-footer h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.sale-popup-footer p {
+    margin-bottom: 15px;
+    color: var(--gray-color);
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
